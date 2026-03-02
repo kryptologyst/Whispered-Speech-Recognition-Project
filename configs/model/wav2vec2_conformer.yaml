@@ -1,0 +1,31 @@
+# Model configuration
+_target_: src.models.wav2vec2_conformer.Wav2Vec2ConformerModel
+
+# Model architecture
+model_name: facebook/wav2vec2-large-960h
+vocab_size: 32
+hidden_size: 1024
+num_attention_heads: 16
+num_hidden_layers: 24
+intermediate_size: 4096
+hidden_dropout: 0.1
+attention_dropout: 0.1
+activation_dropout: 0.1
+
+# Conformer specific
+conformer_num_blocks: 16
+conformer_conv_kernel_size: 31
+conformer_ff_expansion_factor: 4
+conformer_self_attention_dropout: 0.1
+conformer_conv_dropout: 0.1
+conformer_feed_forward_dropout: 0.1
+
+# CTC settings
+ctc_loss_reduction: mean
+ctc_zero_infinity: true
+
+# Language model fusion
+use_lm_fusion: true
+lm_weight: 0.3
+word_score: 0.0
+beam_size: 5

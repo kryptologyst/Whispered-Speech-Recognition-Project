@@ -1,0 +1,26 @@
+# Trainer configuration
+_target_: src.train.trainer.Trainer
+
+# Training parameters
+max_epochs: 100
+learning_rate: 1e-5
+weight_decay: 0.01
+max_grad_norm: 1.0
+
+# Learning rate scheduling
+lr_patience: 5
+lr_factor: 0.5
+lr_min: 1e-7
+
+# Early stopping
+early_stopping_patience: 10
+early_stopping_min_delta: 0.001
+
+# Logging
+log_interval: 10
+save_interval: 1
+
+# Validation
+val_check_interval: 1.0
+monitor: val_loss
+mode: min

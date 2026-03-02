@@ -1,0 +1,18 @@
+# Evaluation configuration
+checkpoint_path: checkpoints/best.ckpt
+beam_size: 5
+use_lm: false
+lm_weight: 0.3
+word_score: 0.0
+
+# Output settings
+save_predictions: true
+save_audio: false
+save_features: false
+
+# Metrics
+compute_wer: true
+compute_cer: true
+compute_accuracy: true
+compute_confidence: true
+compute_rtf: true

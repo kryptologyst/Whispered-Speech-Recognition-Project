@@ -1,0 +1,26 @@
+# Data preparation configuration
+dataset_type: synthetic  # synthetic, real
+dataset_name: whispered_speech_corpus
+data_dir: data
+force_recreate: false
+
+# Synthetic dataset parameters
+num_samples: 1000
+sample_rate: 16000
+min_duration: 1.0
+max_duration: 10.0
+
+# Real dataset parameters (if using real data)
+download_url: ""
+extract_path: ""
+license_info: ""
+
+# Dataset splits
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+
+# Quality control
+min_snr: 10.0
+max_duration: 30.0
+min_duration: 0.5
